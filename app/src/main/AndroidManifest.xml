@@ -13,6 +13,12 @@
         android:theme="@style/Theme.GradesApp"
         tools:targetApi="31">
         <activity
+            android:name=".EditGrade"
+            android:exported="false" />
+        <activity
+            android:name=".AddGrade"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

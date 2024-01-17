@@ -6,6 +6,9 @@ plugins {
 android {
     namespace 'com.hakanbaysal20.gradesapp'
     compileSdk 33
+    buildFeatures{
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId "com.hakanbaysal20.gradesapp"
