@@ -7,7 +7,7 @@
     tools:context=".AddGrade">
 
     <EditText
-        android:id="@+id/editLessonName"
+        android:id="@+id/editTextLessonName"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <EditText
-        android:id="@+id/editMidterm"
+        android:id="@+id/editTextMidterm"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
@@ -30,10 +30,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLessonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLessonName" />
 
     <EditText
-        android:id="@+id/editFinal"
+        android:id="@+id/editTextFinal"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editMidterm" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextMidterm" />
 
     <Button
         android:id="@+id/addGradeButton"
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editFinal" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextFinal" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"

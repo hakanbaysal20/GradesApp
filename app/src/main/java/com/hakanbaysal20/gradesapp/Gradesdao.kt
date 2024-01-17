@@ -32,4 +32,13 @@ class Gradesdao() {
         db.insertOrThrow("grade",null,values)
         db.close()
     }
+    fun editGrade(vba:DatabaseAccess,grade_name: String,midterm: Int,final: Int,grade_id:Int) {
+        val db = vba.writableDatabase
+        val values = ContentValues()
+        values.put("grade_name",grade_name)
+        values.put("midterm",midterm)
+        values.put("final",final)
+        db.update("grade",values,"grade_id=?", arrayOf(grade_id.toString()))
+        db.close()
+    }
 }

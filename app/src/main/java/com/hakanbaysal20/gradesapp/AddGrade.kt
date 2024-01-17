@@ -6,16 +6,18 @@ import com.hakanbaysal20.gradesapp.databinding.ActivityAddGradeBinding
 
 class AddGrade : AppCompatActivity() {
     private lateinit var binding:ActivityAddGradeBinding
+    private lateinit var vba:DatabaseAccess
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddGradeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val vba = DatabaseAccess(this)
-        val ed = "matematik"
-        val not = 50
-        val note= 50
+        vba = DatabaseAccess(this)
+
         binding.addGradeButton.setOnClickListener {
-            Gradesdao().addGrade(vba,ed,not,note)
+            val grade_name = binding.editTextLessonName.text.toString()
+            val midterm = binding.editTextMidterm.text.toString().toInt()
+            val final = binding.editTextFinal.text.toString().toInt()
+            Gradesdao().addGrade(vba,grade_name,midterm,final)
         }
 
     }
