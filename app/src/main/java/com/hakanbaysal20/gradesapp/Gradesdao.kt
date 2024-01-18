@@ -41,4 +41,9 @@ class Gradesdao() {
         db.update("grade",values,"grade_id=?", arrayOf(grade_id.toString()))
         db.close()
     }
+    fun deleteGrade(vba: DatabaseAccess,grade_id:Int){
+        val db = vba.writableDatabase
+        db.delete("grade","grade_id=?", arrayOf(grade_id.toString()))
+        db.close()
+    }
 }

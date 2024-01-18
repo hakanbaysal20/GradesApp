@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableString
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import androidx.core.text.toSpannable
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hakanbaysal20.gradesapp.databinding.ActivityMainBinding
