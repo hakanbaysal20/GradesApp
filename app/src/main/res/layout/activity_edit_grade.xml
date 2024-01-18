@@ -23,6 +23,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
         android:ems="10"
+        android:hint="Lesson..."
         android:inputType="text"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +37,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:ems="10"
+        android:hint="Midterm..."
         android:inputType="number"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +51,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:ems="10"
+        android:hint="Final..."
         android:inputType="number"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,16 +59,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextGradeMidterm" />
 
-    <Button
-        android:id="@+id/editGradeButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Edit grade"
-        android:textSize="18sp"
-        app:cornerRadius="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextGradeFinal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

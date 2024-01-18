@@ -1,5 +1,6 @@
 package com.hakanbaysal20.gradesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hakanbaysal20.gradesapp.databinding.ActivityAddGradeBinding
@@ -18,6 +19,8 @@ class AddGrade : AppCompatActivity() {
             val midterm = binding.editTextMidterm.text.toString().toInt()
             val final = binding.editTextFinal.text.toString().toInt()
             Gradesdao().addGrade(vba,grade_name,midterm,final)
+            startActivity(Intent(this@AddGrade,MainActivity::class.java))
+            finish()
         }
 
     }

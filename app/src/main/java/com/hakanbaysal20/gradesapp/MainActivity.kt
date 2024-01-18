@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         vba = DatabaseAccess(this)
+        //rv
         binding.gradeRv.setHasFixedSize(true)
         binding.gradeRv.layoutManager = LinearLayoutManager(applicationContext)
         gradeList = Gradesdao().getGrades(vba)
@@ -42,6 +43,13 @@ class MainActivity : AppCompatActivity() {
         binding.buttonAdd.setOnClickListener {
             startActivity(Intent(this@MainActivity,AddGrade::class.java))
         }
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(Intent.ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_HOME)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
     }
     fun calculateAvarage(midterm:Int,final:Int):Int {
         val total = (midterm + final) / 2

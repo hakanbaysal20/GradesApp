@@ -42,10 +42,8 @@ import androidx.recyclerview.widget.RecyclerView
          holder.midterm.text = grade.midterm.toString()
          holder.cardView.setOnClickListener {
              val intent = Intent(mContext,EditGrade::class.java)
-             intent.putExtra("final",grade.final)
-             intent.putExtra("midterm",grade.midterm)
-             intent.putExtra("grade_name",grade.grade_name)
-             intent.putExtra("grade",Grade(grade.grade_id,grade.grade_name,grade.midterm,grade.final))
+
+             intent.putExtra("grade",grade)
              mContext.startActivity(intent)
          }
 

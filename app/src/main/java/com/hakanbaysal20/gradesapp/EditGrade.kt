@@ -1,5 +1,6 @@
 package com.hakanbaysal20.gradesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,14 +33,6 @@ class EditGrade : AppCompatActivity() {
         binding.editTextGradeMidterm.setText("${grade.midterm}")
         binding.editTextGradeLessonName.setText("${grade.grade_name}")
         // edit grade
-        binding.editGradeButton.setOnClickListener {
-
-        val grade_name = binding.editTextGradeLessonName.text.toString()
-        val midterm = binding.editTextGradeMidterm.text.toString().toInt()
-        val final = binding.editTextGradeFinal.text.toString().toInt()
-
-            Gradesdao().editGrade(dba, grade_name,midterm,final,grade.grade_id)
-        }
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -53,7 +46,12 @@ class EditGrade : AppCompatActivity() {
                 return true
             }
             R.id.actionEdit ->{
-                Log.e("asdasdasd","asdasd")
+                val grade_name = binding.editTextGradeLessonName.text.toString()
+                val midterm = binding.editTextGradeMidterm.text.toString().toInt()
+                val final = binding.editTextGradeFinal.text.toString().toInt()
+                Gradesdao().editGrade(dba, grade_name,midterm,final,grade.grade_id)
+                startActivity(Intent(this@EditGrade,MainActivity::class.java))
+                finish()
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
